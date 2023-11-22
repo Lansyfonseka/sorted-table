@@ -1,0 +1,25 @@
+.table {
+  &-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 3px;
+    div {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      background-color: #3a424f;
+      overflow-wrap: anywhere;
+    }
+    &:nth-child(2n) {
+      div {
+        background: #2a303b;
+      } 
+    }
+  }
+  &-header {
+    text-align: center;
+    border-bottom: 3px solid #181818;
+  }
+}
