@@ -1,25 +1,44 @@
 .table {
   &-row {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 85px 1fr 1fr 1fr 1fr 1fr 85px 60px 1fr 2fr 2fr 100px;
     align-items: center;
-    column-gap: 3px;
+    column-gap: 3px;    
     div {
+      padding: 0 5px;
       display: flex;
       height: 100%;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      align-items: center;      
       background-color: #3a424f;
       overflow-wrap: anywhere;
+      transition: ease-in-out 0.2s;
     }
     &:nth-child(2n) {
       div {
         background: #2a303b;
       } 
     }
+    &--listItem {
+      flex-direction: column;
+      div {
+        justify-content: center;
+      }
+      div:not(:last-child) {
+        border-bottom: 1px dashed #f8f8f8;
+      }      
+    }
+    &:hover {
+      div {
+        background-color: #5e6883;
+      }
+    }
   }
   &-header {
     text-align: center;
     border-bottom: 3px solid #181818;
+    div{
+      justify-content: center;
+    }
   }
 }

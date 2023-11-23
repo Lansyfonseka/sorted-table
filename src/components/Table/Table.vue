@@ -24,8 +24,12 @@ console.log(database);
     <div v-for="client in database" class="table-row">
       <div>{{ client.o_id }}</div>
       <div>{{ client.client_name }}</div>
-      <div>{{ client.diets }}</div>
-      <div>{{ client.tariff }}</div>
+      <div class="table-row--listItem itemCenter">
+        <div v-for="diet in client.diets">{{ diet }}</div>
+      </div>
+      <div class="table-row--listItem">
+        <div v-for="tarif in client.tariff">{{ tarif }}</div>
+      </div>
       <div>{{ client.address }}</div>
       <div>{{ client.phone }}</div>
       <div></div>
