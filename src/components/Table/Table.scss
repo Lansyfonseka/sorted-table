@@ -1,7 +1,7 @@
 .table {
   &-row {
     display: grid;
-    grid-template-columns: 85px 1fr 1fr 1fr 1fr 1fr 85px 60px 1fr 2fr 2fr 100px;
+    grid-template-columns: 85px 1fr 1fr 1fr 1fr 1fr 110px 60px 1fr 2fr 2fr 120px;
     align-items: center;
     column-gap: 3px;    
     div {
@@ -23,15 +23,21 @@
       flex-direction: column;
       div {
         justify-content: center;
-      }
+      }          
+    }
+    &--listItemDotted {
       div:not(:last-child) {
         border-bottom: 1px dashed #f8f8f8;
-      }      
+      }  
     }
     &:hover {
       div {
         background-color: #5e6883;
       }
+    }
+    .itemCenter {
+      justify-content: center;
+      text-align: center;
     }
   }
   &-header {
